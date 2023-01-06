@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+include texts.pug
+include images.pug
+html
+    head 
+        link(rel="stylesheet", href="css/list3style.css")
+    body 
+        .grid-container
+            .grid-nav
+                include navigation.pug
+            .grid-text1
+                +createTextsForMyBlock1
+            .grid-images
+                +createImages1
+        .grid-container2
+            .grid-text2
+                +createTextsForMyBlock2 
+            .grid-text3
+                +createTextsForMyBlock3
+            

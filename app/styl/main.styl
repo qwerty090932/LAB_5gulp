@@ -1,0 +1,80 @@
+// Please delete before starting
+colBack = #DCDCDC
+maxWidth = 100%
+createGrid(col, rows)
+	display grid
+	grid-template-columns col
+	grid-template-rows rows
+body
+	background-color  #164B69
+	font-family "arial"
+	font-size 14px
+.grid-container
+	min-width 700px
+	min-height 700px
+	width 50%
+	background-color  #E3E3E3
+	margin 20px auto
+	text-align center
+	createGrid(1fr, 50 repeat(2, 1fr))
+.grid-container & .grid-nav 
+	grid-row 1/2
+ul
+	display flex
+	justify-content space-around
+	list-style-type none
+	padding 10px
+a
+	font-weight bold
+	color black
+li 
+	width maxWidth
+	padding 10px
+.first
+	background colBack
+li:hover
+	overflow hidden
+	background colBack
+a:hover
+	overflow hidden
+	text-decoration none
+	color black
+.grid-container & .grid-text
+	padding 10px
+	grid-row 2 / 3
+.grid-container & .grid-video
+	padding 10px
+	grid-row 3 / 4
+img
+	padding 10px
+	float right
+p
+	text-align justify
+	line-height 2em
+	text-indent 20px
+video
+	margin 0 auto
+	padding-top 40px
+	padding 10px
+.grid-container & .grid-video
+	grid-row 3 / 4
+@media (max-width 700px)
+	.grid-container
+		min-width 0px
+		min-height 0px 
+		width maxWidth
+		createGrid(1fr, 50 repeat(2, 1fr))
+	.grid-container & .grid-nav
+		grid-row 1 / 2
+	img 
+		width maxWidth
+		float top
+	.grid-container & .grid-video
+		grid-row 3 / 4
+	video 
+		width maxWidth
+	ul
+		width maxWidth
+		createGrid(1fr 1fr, repeat(3, 50px))
+	li	
+		padding 15px 0px

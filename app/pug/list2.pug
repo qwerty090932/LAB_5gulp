@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+include texts.pug
+html
+    head 
+        link(rel="stylesheet", href="css/list2style.css")
+    body 
+        .grid-container
+            .grid-nav
+                include navigation.pug
+            .grid-images
+                +createImages
+            .grid-text
+                +createText2

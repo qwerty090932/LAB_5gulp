@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+include texts.pug
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		title
+		link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
+		link(rel="stylesheet", href="css/main.css")
+	body
+		.grid-container
+			.grid-nav
+				include navigation.pug
+			.grid-text 
+				+createText1
+			.grid-video
+				+createVideo
+		//- Scripts
+		script(src="js/jquery-3.5.1.min.js")
+		script(src="js/main.js")
